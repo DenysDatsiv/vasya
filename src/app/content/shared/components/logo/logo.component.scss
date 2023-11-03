@@ -1,0 +1,10 @@
+@import "/src/assets/scss/variables";
+.logo {
+  font-family: 'Archivo', sans-serif;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: $logo-color;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}

@@ -1,0 +1,85 @@
+<app-page-header></app-page-header>
+
+<div class="spending-main-container">
+
+  <div class="adding-navigation">
+    <button (click)="addNewSpending()" mat-raised-button>
+      <mat-icon>add</mat-icon>
+      ADD
+    </button>
+  </div>
+
+  <div class="spending-information">
+    <p class="total-spending-header">Total spending</p>
+    <p class="total-spending-amount">{{ totalSpendingAmount|currency }}</p>
+    <mat-tab-group class="tab-group">
+      <mat-tab *ngFor="let tab of tabs" [label]="tab.label">
+        <ng-container
+          *ngIf="tab.value === 'day';
+                  then dayTemplate else
+                     tab.value === 'range' ? rangeTemplate :
+                      tab.value === 'year' ? yearTemplate :
+                      defaultTemplate"
+        >
+        </ng-container>
+        <ng-template #dayTemplate>
+          <app-day-picker (daySelected)="getFilteredSpending($event)"/>
+        </ng-template>
+        <ng-template #rangeTemplate>
+          <app-custom-picker (dateRangeSelected)="getFilteredSpending($event)"/>
+        </ng-template>
+        <ng-template #yearTemplate>
+          <app-year-dropdown (yearSelected)="getFilteredSpending($event)"/>
+        </ng-template>
+        <ng-template #defaultTemplate>
+          <app-day-picker (daySelected)="getFilteredSpending($event)"/>
+        </ng-template>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+
+  <div [class.expanded]="expanded" [ngClass]="{'floating-footer-scroll': expanded}" class="floating-footer">
+
+    <app-spending-filtration
+      (filteredData)="handleFilteredData($event)"
+      (showFilterValue)="receiveShowFilterValue($event)"
+      [showFilter]="showFilter"
+    />
+
+    <div class="nav-floating-footer" [ngClass]="{'filtration-opened': showFilter}">
+      <mat-divider class="floating-footer-divider"/>
+
+      <div [ngClass]="{'is-container-extended': !expanded}" class="navigation-wrapper">
+        <button *ngIf="expanded" class="see-all-btn" (click)="toggleFilter()">
+          <mat-icon>filter_list</mat-icon>
+        </button>
+        <button (click)="toggleFooter()" class="see-all-btn">
+          {{ expanded ? 'Close' : 'See all' }}
+        </button>
+      </div>
+
+      <div *ngIf="expenses.length === 0" class="not-found">
+        <p>No records found 😔</p>
+      </div>
+
+      <div class="general-wrapper" *ngFor="let groupedExpense of groupedExpenses">
+        <div class="general-expense-wrapper">
+
+          <div class="date-header">
+            {{ groupedExpense.date === todayDate ? 'Today' : groupedExpense.date | date}}
+          </div>
+          <div *ngFor="let expense of groupedExpense.expenses">
+            <div class="expense-wrapper">
+              <div class="expense-description">
+                <p class="type-of-expense">{{ expense.type }}</p>
+                <p class="date-of-expense">{{ expense.createdAt | date }}</p>
+              </div>
+              <p class="amount-of-expense">-{{ expense.amount | currency }}</p>
+            </div>
+            <mat-divider class="expense-divider"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

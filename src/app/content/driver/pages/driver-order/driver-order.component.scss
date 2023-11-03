@@ -1,0 +1,12 @@
+.app-wrapper-with-navigation {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.order-list {
+  margin-top:80px;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+

@@ -1,0 +1,22 @@
+<mat-tab-group class="bottom-tab" [selectedIndex]="activeTabIndex">
+
+  <mat-tab *ngFor="let tab of tabs; let i = index" [disabled]="isSidenavOpen">
+    <ng-template mat-tab-label>
+      <div class="tab-label" (click)="handleTabClick(tab.route, i)">
+        <mat-icon>{{ tab.icon }}</mat-icon>
+        <span class="nav-tab-route-name">{{ tab.label }}</span>
+      </div>
+    </ng-template>
+    <router-outlet></router-outlet>
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <div class="tab-label" (click)="toggleSidebar()">
+        <mat-icon>more_horiz</mat-icon>
+        <span class="nav-tab-route-name">More</span>
+      </div>
+    </ng-template>
+  </mat-tab>
+
+</mat-tab-group>

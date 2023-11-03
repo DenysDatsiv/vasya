@@ -1,0 +1,19 @@
+@import "/src/assets/scss/variables";
+:host {
+  ::ng-deep {
+    .mat-mdc-unelevated-button.mat-mdc-button-base {
+      background-color: $btn-background-color;
+      color: $btn-text-color;
+      font-size: 18px;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 15rem;
+      height: 50px;
+      border-radius: $btn-radius;
+
+    }
+    .mat-mdc-unelevated-button.mat-mdc-button-base:disabled {
+      background-color: $btn-disabled-background-color;
+      color: #818181;
+    }
+  }}

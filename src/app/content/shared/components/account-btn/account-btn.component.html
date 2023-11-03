@@ -1,0 +1,8 @@
+<mat-card class="account-card-container">
+  <img mat-card-avatar src="https://images.unsplash.com/photo-1530268729831-4b0b9e170218?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmVhbCUyMHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D">
+  <mat-card-content class="account-information-wrapper">
+    <mat-card-title>Account information</mat-card-title>
+    <mat-card-subtitle>
+      {{ email.length > 16 ? email.slice(0, 16) + '...' : email }}
+    </mat-card-subtitle>  </mat-card-content>
+</mat-card>

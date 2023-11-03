@@ -1,0 +1,29 @@
+<mat-card
+  *ngFor="let item of orderShortInformation;let i=index"
+  (click)="cardMoreInformation(item.id)"
+  class='card-main-container'
+>
+  <mat-card-content>
+    <mat-card-header>
+      <div>
+        <div class="place-container">
+          <p class="city-name">{{item.pickupLocation}}</p>
+        </div>
+        <div class="place-container">
+          <p class="city-name">{{item.deliveryLocation}}</p>
+        </div>
+      </div>
+      <mat-icon class="arrow_tag">arrow_right_alt</mat-icon>
+    </mat-card-header>
+    <mat-card-footer>
+      <div class="short-info-tag">
+        <mat-icon>access_time</mat-icon>
+        <p>{{item.timeToDeliver}}</p>
+      </div>
+      <div class="short-info-tag">
+        <mat-icon> local_shipping</mat-icon>
+        <p>{{item.distance}}</p>
+      </div>
+    </mat-card-footer>
+  </mat-card-content>
+</mat-card>

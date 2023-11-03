@@ -1,0 +1,183 @@
+[
+  {
+    "id": 1,
+    "driverId": 123,
+    "carId": 456,
+    "amount": 50,
+    "type": "Fuel",
+    "description": "Refueled the tank",
+    "createdAt": "2023-10-12T12:00:00Z"
+  },
+  {
+    "id": 2,
+    "driverId": 123,
+    "carId": 456,
+    "amount": 30,
+    "type": "Maintenance",
+    "description": "Oil change",
+    "createdAt": "2023-10-12T09:30:00Z"
+  },
+  {
+    "id": 3,
+    "driverId": 123,
+    "carId": 789,
+    "amount": 70,
+    "type": "Toll",
+    "description": "Highway toll",
+    "createdAt": "2023-10-14T15:45:00Z"
+  },
+  {
+    "id": 4,
+    "driverId": 124,
+    "carId": 457,
+    "amount": 60,
+    "type": "Fuel",
+    "description": "Refueled halfway",
+    "createdAt": "2023-10-14T10:15:00Z"
+  },
+  {
+    "id": 5,
+    "driverId": 124,
+    "carId": 457,
+    "amount": 25,
+    "type": "Maintenance",
+    "description": "Tire replacement",
+    "createdAt": "2023-10-13T13:20:00Z"
+  },
+  {
+    "id": 6,
+    "driverId": 125,
+    "carId": 458,
+    "amount": 45,
+    "type": "Fuel",
+    "description": "Top up for the trip",
+    "createdAt": "2023-10-15T16:25:00Z"
+  },
+  {
+    "id": 7,
+    "driverId": 125,
+    "carId": 458,
+    "amount": 40,
+    "type": "Maintenance",
+    "description": "Brake pad replacement",
+    "createdAt": "2023-10-15T14:30:00Z"
+  },
+  {
+    "id": 8,
+    "driverId": 126,
+    "carId": 459,
+    "amount": 55,
+    "type": "Toll",
+    "description": "City toll",
+    "createdAt": "2023-10-15T11:35:00Z"
+  },
+  {
+    "id": 9,
+    "driverId": 126,
+    "carId": 459,
+    "amount": 20,
+    "type": "Fuel",
+    "description": "Quick refill",
+    "createdAt": "2023-10-15T10:40:00Z"
+  },
+  {
+    "id": 10,
+    "driverId": 127,
+    "carId": 460,
+    "amount": 65,
+    "type": "Maintenance",
+    "description": "Air filter change",
+    "createdAt": "2023-10-16T12:45:00Z"
+  },
+  {
+    "id": 11,
+    "driverId": 127,
+    "carId": 460,
+    "amount": 35,
+    "type": "Toll",
+    "description": "Bridge toll",
+    "createdAt": "2023-10-16T13:50:00Z"
+  },
+  {
+    "id": 12,
+    "driverId": 128,
+    "carId": 461,
+    "amount": 75,
+    "type": "Fuel",
+    "description": "Full tank",
+    "createdAt": "2023-10-17T17:55:00Z"
+  },
+  {
+    "id": 13,
+    "driverId": 128,
+    "carId": 461,
+    "amount": 30,
+    "type": "Maintenance",
+    "description": "Spark plug change",
+    "createdAt": "2023-10-27T19:00:00Z"
+  },
+  {
+    "id": 14,
+    "driverId": 129,
+    "carId": 462,
+    "amount": 55,
+    "type": "Toll",
+    "description": "Expressway toll",
+    "createdAt": "2023-10-26T22:05:00Z"
+  },
+  {
+    "id": 15,
+    "driverId": 129,
+    "carId": 462,
+    "amount": 40,
+    "type": "Fuel",
+    "description": "Long-distance drive",
+    "createdAt": "2021-10-27T18:10:00Z"
+  },
+  {
+    "id": 16,
+    "driverId": 130,
+    "carId": 463,
+    "amount": 60,
+    "type": "Maintenance",
+    "description": "Wheel alignment",
+    "createdAt": "2023-10-31T16:15:00Z"
+  },
+  {
+    "id": 17,
+    "driverId": 130,
+    "carId": 463,
+    "amount": 35,
+    "type": "Toll",
+    "description": "Freeway toll",
+    "createdAt": "2023-10-25T14:20:00Z"
+  },
+  {
+    "id": 18,
+    "driverId": 131,
+    "carId": 464,
+    "amount": 70,
+    "type": "Fuel",
+    "description": "Road trip fuel",
+    "createdAt": "2023-10-23T12:25:00Z"
+  },
+  {
+    "id": 19,
+    "driverId": 131,
+    "carId": 464,
+    "amount": 25,
+    "type": "Maintenance",
+    "description": "Fluid top-up",
+    "createdAt": "2023-09-17T10:30:00Z"
+  },
+  {
+    "id": 20,
+    "driverId": 132,
+    "carId": 465,
+    "amount": 45,
+    "type": "Toll",
+    "description": "Highway toll",
+    "createdAt": "2023-10-19T08:35:00Z"
+  }
+
+  ]

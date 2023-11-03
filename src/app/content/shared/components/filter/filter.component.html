@@ -1,0 +1,18 @@
+<div class="filtration-container">
+<div>
+  <mat-divider class="filtration-divider-main"/>
+  <div class="header-navigation">
+    <div class="test">
+      <p class="filter-text">Filter</p>
+    </div>
+    <button class="clear-button" (click)="clearFiltration()">Back</button>
+  </div>
+  <mat-divider class="filtration-block-underlining"/>
+</div>
+  <ng-content></ng-content>
+  <div class="position-bottom-wrapper">
+    <mat-divider class="filtration-block-underlining"/>
+    <app-button type="submit" class="filter-btn">Filter</app-button>
+  </div>
+
+</div>

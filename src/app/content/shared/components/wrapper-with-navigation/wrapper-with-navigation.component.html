@@ -1,0 +1,14 @@
+<div>
+  <app-navigation
+    (isSidenavOpenChange)="handleSidenavOpenChange($event)"
+    [isSidenavOpen]="isSidenavOpen"
+  />
+  <div
+    (click)="closeSidebar()"
+    [ngClass]="{'background-disabled': isSidenavOpen}"
+    >
+    <div [ngClass]="{'pointer-working': isSidenavOpen}">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

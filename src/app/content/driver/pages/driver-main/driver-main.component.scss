@@ -1,0 +1,15 @@
+.background-disabled
+{
+  height: 100vh;
+  background-color: #b0b0b0;
+  opacity: 0.5;
+}
+.rest
+{
+  width: 100vw;
+  height: 100vh;
+}
+.pointer-working
+{
+  pointer-events: none;
+}

@@ -1,0 +1,19 @@
+.background-disabled {
+  height: 100vh;
+  background-color: #b0b0b0;
+  overflow: hidden;
+  opacity: 0.5;
+}
+
+.content-page-size {
+  width: 100vw;
+  height: 100vh;
+}
+
+.pointer-working {
+  pointer-events: none;
+}
+.content-inside-ng-content {
+  position: relative;
+  z-index: 1;
+}

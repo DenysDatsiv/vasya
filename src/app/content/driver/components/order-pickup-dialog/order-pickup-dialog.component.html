@@ -1,0 +1,21 @@
+<div class="test">
+  <h2 class="tester"
+      mat-dialog-title>
+    {{
+    data.status === 'pending' ? 'Confirm Acceptance' :
+      (data.status === 'accepted' ? 'Confirm Pickup' : 'Confirm Delivery')
+    }}</h2>
+  <mat-dialog-content>
+    <p>
+      {{
+      data.status === 'pending' ? 'Are you sure you want to accept this order?' :
+        data.status === 'accepted' ? 'Are you sure you want to pick up this order?' :
+          'Are you sure you want to deliver this order?'
+      }}
+    </p>
+  </mat-dialog-content>
+  <mat-dialog-actions class="control-container">
+    <button (click)="dialogRef.close()" mat-button>Cancel</button>
+    <button (click)="onChangeStatus()" mat-button>Confirm</button>
+  </mat-dialog-actions>
+</div>

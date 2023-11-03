@@ -1,0 +1,54 @@
+@import "/src/assets/scss/variables";
+
+.side-bar-header {
+  color: #FFFFFF;
+  margin-left: 20px;
+}
+
+.side-bar-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.side-bar-nav-list-element {
+  margin-left: 29px;
+  color:#FFFFFF;
+  font-size: 21px;
+  height: 48px;
+}
+
+:host {
+  ::ng-deep {
+    .sidenav {
+      width: 100%;
+      max-width: 300px;
+      z-index: 2;
+      margin-left: auto;
+      height: 100vh;
+      background-color: #1E1E1E;
+      box-shadow: $side-bar-shadow 0 25px 50px -12px;
+      border-top-left-radius: 35px;
+      border-bottom-left-radius: 35px;
+    }
+
+    .mat-mdc-list-item-unscoped-content {
+      margin-left: 20px;
+      color: #FFFFFF;
+      font-size: 21px;
+    }
+
+    .mat-divider {
+      border-top-color:#FFF;
+      width: 85%;
+      display: flex;
+      margin: 5px auto;
+    }
+
+    .mdc-button__label {
+      color: #FFFFFF;
+    }
+  }
+}
+
+
+

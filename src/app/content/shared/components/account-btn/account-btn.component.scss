@@ -1,0 +1,48 @@
+:host::ng-deep
+{
+  .mat-mdc-card {
+    background-color: #2B2B2B;
+    margin: 10px auto; /* Center horizontally */
+    border-radius: 25px;
+    padding: 10px;
+    align-items: center;
+    position: fixed;
+    bottom: 30px;
+    right: 0;
+  }
+
+  .mat-mdc-card-avatar
+  {
+    height: 45px;
+    width: 45px;
+    margin: auto 13px auto 8px;
+  }
+  .mat-mdc-card-content
+  {
+    padding: 0;
+  }
+  .mat-mdc-card-content:last-child
+  {
+    padding-bottom: 0;
+    margin-right: 25px;
+  }
+.mat-mdc-card-title
+{
+  color: #2F88FF;
+}
+  .mat-mdc-card-subtitle {
+    color: #B5B5B5;
+  }
+}
+.account-information-wrapper
+{
+display: flex;
+flex-direction: column;
+}
+.account-card-container
+{
+display: flex;
+flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 11px;
+}

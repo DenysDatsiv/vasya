@@ -1,0 +1,38 @@
+@import "variables";
+.informational-header-emoji
+{
+  font-size: 80px;
+}
+.informational-header {
+  color: $main-text-color;
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.informational-subtext {
+  color: $main-text-color;
+  font-size: 20px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+.error-subtext{
+  font-size: 25px;
+}
+:host::ng-deep {
+  .mdc-button {
+    max-width: 210px;
+    min-height: 50px;
+    margin: 25px auto;
+  }
+
+  .mat-mdc-raised-button.mat-unthemed {
+    background-color: $btn-background-color;
+    color: $btn-text-color;
+  }
+}

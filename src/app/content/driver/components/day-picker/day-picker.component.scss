@@ -1,0 +1,49 @@
+@import "/src/assets/scss/variables";
+
+:host::ng-deep {
+  .mdc-text-field--filled .mdc-line-ripple::after {
+    border-bottom-color: $input-underline-color;
+  }
+
+  .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: $input-underline-color;
+  }
+
+  .mat-mdc-text-field-wrapper {
+    border-radius: 15px;
+    background-color: $input-background-color;
+  }
+
+  .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: $label-color;
+  }
+
+  .ng-star-inserted {
+    color: $input-underline-color;
+
+  }
+}
+
+::ng-deep {
+  .mat-calendar-arrow {
+    fill: $input-underline-color;
+
+  }
+
+  .mat-datepicker-content .mat-calendar-previous-button {
+    color: $input-underline-color;
+  }
+
+  .mat-datepicker-content .mat-calendar-next-button {
+    color: $input-underline-color;
+  }
+
+  .mat-calendar-body-label, .mat-calendar-body-cell-content, .mdc-button__label,
+  {
+    color: #FFFFFF;
+  }
+
+  .mat-calendar, .mat-calendar-content, .mat-calendar-header {
+    background-color: $input-background-color;
+  }
+}

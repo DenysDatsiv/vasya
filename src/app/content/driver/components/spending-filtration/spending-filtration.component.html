@@ -1,0 +1,38 @@
+<div>
+  <form
+    (ngSubmit)="applyFiltering()"
+    *ngIf="showFilter"
+    [formGroup]="filterForm">
+    <app-filter
+      [resetedForm]='filterForm'
+      [showFilter]="showFilter">
+      <div class="filter-content">
+        <mat-form-field>
+          <mat-label>Enter a date range</mat-label>
+          <mat-date-range-input [rangePicker]="picker">
+            <input
+              formControlName="startDate"
+              matStartDate
+              placeholder="Start date"
+              readonly>
+            <input
+              formControlName="endDate"
+              matEndDate
+              placeholder="End date"
+              readonly>
+          </mat-date-range-input>
+          <mat-datepicker-toggle
+            [for]="picker"
+            matIconSuffix/>
+          <mat-date-range-picker #picker/>
+        </mat-form-field>
+        <app-input
+          [isRequired]="false"
+          class="type-input"
+          formControlName="typeOfExpense"
+          label="Enter the type of expense"
+          type="text"/>
+      </div>
+    </app-filter>
+  </form>
+</div>

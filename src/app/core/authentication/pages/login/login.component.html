@@ -1,0 +1,54 @@
+<form
+  (ngSubmit)="onSubmit()"
+  [formGroup]="loginForm"
+  class="login-form"
+>
+  <app-logo></app-logo>
+
+  <div class="login-input-block">
+
+    <app-input required formControlName="email"   [isRequired]="true" label="Email or username" type="email"/>
+    <mat-form-field class="custom-form-field">
+      <mat-label class="input-label">Password</mat-label>
+      <input
+        [type]="passwordVisibility ? 'password' : 'text'"
+        formControlName="password"
+        matInput
+      >
+      <button
+        (click)="passwordVisibility = !passwordVisibility"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="passwordVisibility"
+
+        mat-icon-button
+        matSuffix
+      >
+        <mat-icon>
+          {{passwordVisibility ? 'visibility_off' : 'visibility'}}
+        </mat-icon>
+      </button>
+
+    </mat-form-field>
+
+  </div>
+  <a
+    [routerLink]="['/forgot-password']"
+    class="forgot-password"
+  >
+    Forgot password?
+  </a>
+  <button
+    [disabled]="!loginForm.valid"
+    [ngClass]="{'disabled-button': !loginForm.valid, 'custom-button': loginForm.valid}"
+
+    mat-flat-button
+    type="submit"
+  >
+    <ng-container *ngIf="isDataLoading; else signInContent">
+      <app-spinner></app-spinner>
+    </ng-container>
+    <ng-template #signInContent>
+      Sign in
+    </ng-template>
+  </button>
+</form>

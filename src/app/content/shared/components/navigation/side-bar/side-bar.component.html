@@ -1,0 +1,17 @@
+<div class="side-bar-wrapper" >
+  <mat-sidenav #sidenav mode="side" class="sidenav" [opened]="isSidenavOpen">
+    <mat-nav-list>
+      <p class="side-bar-header">Menu</p>
+      <ng-container *ngFor="let route of sidebarRoutes">
+        <ng-container *ngIf="route.type === 'divider'; else linkTemplate">
+          <mat-divider></mat-divider>
+        </ng-container>
+        <ng-template #linkTemplate>
+          <a  mat-list-item [routerLink]="route.path">{{ route.label }}</a>
+        </ng-template>
+      </ng-container>
+      <button mat-button class="side-bar-nav-list-element" (click)="logout()">Log Out</button>
+    </mat-nav-list>
+    <app-account-btn/>
+  </mat-sidenav>
+</div>

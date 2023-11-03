@@ -1,0 +1,103 @@
+{
+  "driverId": 12345,
+  "orders": [
+    {
+      "orderId": "1",
+      "pickupDetails": {
+        "location": "Warehouse A",
+        "contactName": "John Doe",
+        "contactPhone": "555-555-5555",
+        "loadDate": "2023-10-22T12:00:00Z"
+      },
+      "deliveryDetails": {
+        "location": "Retail Store B",
+        "contactName": "Jane Smith",
+        "contactPhone": "555-555-5556",
+        "deliveryDate": "2023-10-22T16:00:00Z"
+      },
+      "cargoDetails": {
+        "type": "Electronics",
+        "weight": 1500,
+        "dimensions": "3ft x 3ft x 3ft"
+      },
+      "loadInfo": {
+        "loadNumber": "Load123",
+        "trailerNumber": "Trailer456",
+        "sealNumber": "Seal789"
+      },
+      "BOL": {
+        "number": "BOL123",
+        "date": "2023-10-22",
+        "pdfLink": "http://example.com/BOL123.pdf"
+      },
+      "contactInfo": {
+        "shipper": {
+          "name": "ABC Electronics",
+          "phone": "555-555-5557",
+          "address": "123 Main Street, Anytown, USA"
+        },
+        "consignee": {
+          "name": "XYZ Retail",
+          "phone": "555-555-5558",
+          "address": "456 Oak Avenue, Othertown, USA"
+        }
+      },
+      "insuranceAndLiability": {
+        "insuranceCompany": "ABC Insurance",
+        "policyNumber": "Policy789",
+        "liabilityAmount": 1000000
+      },
+      "status": "pending",
+      "scheduledTime": "2023-10-22T12:00:00Z"
+    },
+    {
+      "orderId": "2",
+      "pickupDetails": {
+        "location": "Warehouse X",
+        "contactName": "Sam Johnson",
+        "contactPhone": "555-555-5559",
+        "loadDate": "2023-10-23T14:00:00Z"
+      },
+      "deliveryDetails": {
+        "location": "Retail Store Y",
+        "contactName": "Emily Brown",
+        "contactPhone": "555-555-5560",
+        "deliveryDate": "2023-10-23T18:00:00Z"
+      },
+      "cargoDetails": {
+        "type": "Clothing",
+        "weight": 800,
+        "dimensions": "2ft x 2ft x 2ft"
+      },
+      "loadInfo": {
+        "loadNumber": "Load456",
+        "trailerNumber": "Trailer789",
+        "sealNumber": "Seal012"
+      },
+      "BOL": {
+        "number": "BOL456",
+        "date": "2023-10-23",
+        "pdfLink": "http://example.com/BOL456.pdf"
+      },
+      "contactInfo": {
+        "shipper": {
+          "name": "DEF Clothing",
+          "phone": "555-555-5561",
+          "address": "789 Oak Street, Somewhere, USA"
+        },
+        "consignee": {
+          "name": "GHI Retail",
+          "phone": "555-555-5562",
+          "address": "012 Elm Road, Nowhere, USA"
+        }
+      },
+      "insuranceAndLiability": {
+        "insuranceCompany": "DEF Insurance",
+        "policyNumber": "Policy012",
+        "liabilityAmount": 2000000
+      },
+      "status": "pending",
+      "scheduledTime": "2023-10-23T14:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+@import "/src/assets/scss/variables";
+
+:host::ng-deep {
+  .mdc-text-field--filled .mdc-line-ripple::after {
+    border-bottom-color: $input-underline-color;
+  }
+
+  .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: $input-underline-color;
+  }
+
+  .mat-mdc-text-field-wrapper {
+    border-radius: 15px;
+    background-color: $input-background-color;
+  }
+
+  .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: $label-color;
+  }
+
+  .mat-calendar-body-cell-container {
+    color: $main-text-color;
+  }
+
+  .ng-star-inserted {
+    color: $input-underline-color;
+  }
+}

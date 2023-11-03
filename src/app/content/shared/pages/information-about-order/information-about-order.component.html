@@ -1,0 +1,28 @@
+<app-page-header/>
+
+<div *ngIf="orderData" class="order-info-wrapper">
+  <div class="status-wrapper">
+    <p class="status-label">Status:</p>
+    <p
+      [ngClass]="getStatusClass()"
+      class="status-header"
+    >
+      {{ orderData.status | titlecase }}
+    </p>
+  </div>
+  <app-accordion [orderData]="orderData"/>
+
+</div>
+<app-button
+  (click)="openDialog()"
+  [disabled]="orderData?.status === 'delivered'"
+  class="change-status-btn"
+>
+  {{
+  orderData?.status === 'pending' ?
+    'Accept' : orderData?.status === 'accepted' ?
+      'Picked up' : orderData?.status === 'pickedUp' ?
+        'Delivered' : orderData?.status === 'delivered' ?
+          'Delivered' : 'Unknown Status'
+  }}
+</app-button>

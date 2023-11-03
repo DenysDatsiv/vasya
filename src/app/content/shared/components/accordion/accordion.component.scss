@@ -1,0 +1,55 @@
+.property {
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+}
+
+.info{
+}
+.property-name {
+  font-weight: 600;
+  margin-right: 5px;
+  color: #FFFFFF;
+  word-wrap: break-word;
+  align-items: center;
+}
+
+.property-value {
+  font-weight: normal;
+  color: #bdbdbd;
+}
+.accordion-panel-wrapper
+{
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  border-radius:20px;
+  background-color: #2B2B2B;
+}
+.section-header
+{
+  color: #878787;
+}
+.panel-contant-title
+{
+  color: #118DFF;
+}
+:host::ng-deep {
+
+
+  .mat-expansion-panel-header-description, .mat-expansion-indicator::after {
+    color: #878787;
+  }
+}
+@media (hover: none) {
+  .mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover {
+    background: #118DFF;
+  }
+}
+@media screen and (max-width: 500px) {
+  .property-value
+  {
+    word-wrap: break-word;
+    max-width: 17rem;
+  }
+}
