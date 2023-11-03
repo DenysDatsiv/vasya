@@ -7,8 +7,8 @@ import {AccordionDataService} from "../../../../core/services/accordion-data.ser
   styleUrls: ['./accordion.component.scss']
 })
 export class AccordionComponent implements OnInit{
-  @Input() orderData: any = [];
-  panels = [];
+  @Input() orderData: any = []; //ToDo:change any
+  panels ;
 
   constructor(private accordionDataService: AccordionDataService) {}
   ngOnInit(): void {
